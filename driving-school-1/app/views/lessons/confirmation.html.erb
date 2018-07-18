@@ -1,0 +1,27 @@
+<div class="gallery-single-wrapper clearfix confirm">
+    <article class="gallery-single">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <div class="side-content clearfix">
+                    <!--gallery item title-->
+                    <center><h1 class="entry-title">lesson Confirmation</h1></center>
+                    
+                    <!--gallery item detail-->
+                    <div class="entry-content">
+                        <p>Thank You for booking an lesson at Bristall Medical Centre</p>
+                        <p>Your lesson details have been sent to you by email and the details is as follows</p>
+                        
+                        <blockquote><center><h1 class="entry-title">lesson Details</h1>
+                            <p><strong>Instructor:</strong> <%= @lesson.user.title %> <%= @lesson.user.first_name %> <%= @lesson.user.last_name %></p>
+                            <p><strong>Date:</strong> <%= @lesson.lesson_date %></p>
+                            <p><strong>Time:</strong> <%= @lesson.lesson_time.strftime("%H:%M:%S") %></p></center>
+                        </blockquote>
+                        
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </article>    
+</div>  

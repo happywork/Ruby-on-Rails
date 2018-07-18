@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Driving School</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- START OF NAVIGATION BAR -->
+<nav class="topnav" id="myTopnav">
+  <%= link_to "Home", root_path%> 
+
+                  <% if instructor_signed_in? %>
+                    
+                        <a  href="/instructors/dashboard">Dashboard</a>
+                   
+                   
+                        <a  href="/instructors/sign_out" data-method="delete">Log Out</a>
+                   
+                <% elsif student_signed_in? %>
+                    
+                        <a  href="/students/dashboard">Dashboard</a>
+                    
+                    
+                        <a  href="/students/sign_out" data-method="delete">Log Out</a>
+                    
+                <% else %>
+                   
+                        <a  href="/instructors/sign_in">Sign In As Instructor</a>
+                  
+                   
+                        <a  href="/students/sign_in">Sign In As Student</a>
+               
+                <% end %>
+            </ul>
+			
+			
+</nav>
+  <!-- END OF NAVIGATION BAR -->
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>

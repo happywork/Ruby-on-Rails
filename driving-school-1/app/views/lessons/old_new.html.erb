@@ -1,0 +1,28 @@
+This appointment will be with
+<%= @doctor.title %> <%= @doctor.first_name %> <%= @doctor.last_name %>
+<br/>
+<%= form_for @appointment do |f| %>
+  
+  
+  <div class="field">
+    <%= f.label :appointment_date %>
+    <%= f.date_field :appointment_date, min: Date.today, :required => :true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :appointment_time %>
+    <%= f.time_select :appointment_time, :start_hour => 10, :end_hour => 17, :minute_step => 15 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :reason %>
+    <%= f.text_area :reason %>
+  </div>
+  
+  <%= hidden_field_tag "doctor_id", params[:format] %>
+  <%= f.hidden_field :client_id, value: current_client.id %>
+  
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,452 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* this is a comment within a css file, ignored by the computer ... */
+
+/* to ensure the 'main-div' displays the full length of any size screen
+	use the commands below -
+	set the 'html' and 'body' height attribute value to 100% 
+	set the 'min-height' of the 'main-div' to 100% 
+	*/
+
+/* GLOBAL STYLES */
+html {
+		-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
+}
+
+body {
+  margin: 25px;
+  padding:0;
+  background: white;  /* WHITE */
+  color: black;  /* BLACK */
+}
+
+
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: white; /* WHITE */
+  text-align: center;
+  padding: 2px;
+}
+
+header {
+  background: #FBFCFC; /* GREY */
+  color: #212F3D; /* NAVY */
+  text-align: center;
+  padding: 0 px;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 1em;
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+
+h6 {
+	font-size: 0em;
+}
+
+p {
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+#logo {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 0 px;
+  font-family: 'Righteous', cursive;
+}
+
+  /* START OF TEXTBOX ERRORS */
+  
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+	color: black;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+  color: black;
+  margin: 0 auto;
+}
+  /* END OF TEXTBOX ERRORS */
+  
+  /* START OF ERROR BOX */
+#error_explanation {
+  max-width: 1500px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-family: arial;
+  color: red;
+  margin: 0 auto;
+}
+  ul li {
+	color: black;
+  }
+
+  /* END OF ERROR BOX */
+  
+left {
+  text-align: left;
+}
+	
+
+  /* AD BANNER */
+.mid-container {	
+  padding: 1px;
+  background-color: #16A085; /* TEAL */
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Mukta', sans-serif;
+  max-width: 1500px;
+}
+
+
+  /* THIRD BREAKPOINT (MOBILE SIZE) */
+@media screen and (min-width: 300px) {
+  body {
+    background: white;
+	font-family: arial;
+}
+  section {
+    width: 80%;
+}
+  h1 { 
+    font-size: 30px; 
+}
+
+  h2 {
+    font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+i {
+ color: white;
+}
+
+}
+
+  /* LEFT HAMBURGER (MOBILE SIZE) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: left;
+    display: block;
+	color: white;
+  }
+}
+
+  /* RIGHT HAMBURGER (MOBILE SIZE) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+	color: white;
+  }
+  
+  /* TEXT (MOBILE SIZE) */
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+	color: white;
+  }
+
+}
+
+
+
+  /* END OF THIRD BREAKPOINT */
+
+  /* SECOND BREAKPOINT (TABLET SIZE) */
+@media screen and (min-width: 500px) {
+  body {
+	background: white;
+	font-family: arial;
+  }
+  
+  section {
+	display: inline-block;
+	width: 45%;
+  }
+  
+    h1 { 
+  font-size: 40px; 
+}
+
+h2 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 20px;
+}
+
+}
+  /* END OF SECOND BREAKPOINT */
+
+
+  /* FIRST BREAKPOINT (DESKTOP SIZE) */
+@media screen and (min-width: 1000px) {
+  body {
+	background: white;
+	font-family: arial;
+  }
+  section {
+	width: 22%;
+  }
+    h1 { 
+  font-size: 50px; 
+}
+h2 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 22px;
+}
+}
+  /* END FIRST BREAKPOINT */
+
+
+  /* START OF NAV BAR */
+nav {
+  overflow: hidden;
+  background-color: #212F3D; /* NAVY */
+  max-width:1500px;
+  margin:0 auto;
+  list-style:none;
+  text-align: center;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;   /* WHITE */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li {
+  float:left;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #717171; /* GREY */
+  color: white; 
+}
+
+nav .icon {
+  display: none;
+}
+
+.active {
+	background-color: #212F3D; /* NAVY */
+}
+* {
+  box-sizing: border-box;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #212F3D; /* NAVY */
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #717171; /* GREY */
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+  /* END OF NAV BAR */
+
+ 
+   /* SLIDESHOW */
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -300%; }
+}
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+#wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+  /* SLIDESHOW ENDS */
+
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+	background-color: white;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 20px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+	background-color: white;
+	color: black;
+	font-family: 'Mukta', sans-serif;
+}
+
+.price .grey {
+    background-color: #F8F9F9;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+
+
+
+  /* FOOTER */
+  
+footer {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #212F3D; /* NAVY */
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 15px;
+  font-family: 'Mukta', sans-serif;
+  
+}
+  /* END OF FOOTER */
+	

@@ -1,0 +1,17 @@
+<h1>Main#index</h1>
+<p>app/views/main/index.html.erb</p>
+
+
+<div class="row">
+            
+            <% @instructors.each do |instructor| %>
+            <div class="col-md-4 col-sm-6 ">
+                    <div class="text-content">                  
+                            <h5 class="entry-title"><a href="/instructors/<%=instructor.id%>"><%= instructor.email %></a></h5>
+							<%#= link_to (image_tag instructor.img_url,:size => "100x125"),instructor %>
+                    </div>
+            </div>
+            <% end %>
+ 
+ 
+ </div>

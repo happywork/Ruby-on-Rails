@@ -1,0 +1,41 @@
+<div class="appoint-page clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <article class="page type-page status-publish hentry clearfix">
+                    <div class="entry-content text-center">
+                        <h2 >Make an lesson with <%= @instructor.title %> <%= @instructor.first_name %> <%= @instructor.last_name %></h2>
+                    </div>
+                </article>
+
+                <!--lesson form-->
+                <div class="appoint-section clearfix">
+                    <div class="top-icon"><img src="/appoint-form-top.png" alt=""/></div>
+                    <div id="lesson_form_main">
+                    <%= form_for @lesson do |f| %>
+                        <div class="row">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                            <%= f.label :lesson_date %>    
+                            <%= f.date_field :lesson_date, min: Date.today, :required => :true %>  
+                            </div>
+                            <div class="col-md-6 appoint_time">
+                                <%= f.label :lesson_time %> 
+                                <%= f.time_select :lesson_time, :start_hour => 10, :end_hour => 17, :minute_step => 15, :required => :true %>
+                            </div>
+                        </div>
+
+                        <%= hidden_field_tag "instructor_id", params[:format] %>
+                        <%= f.hidden_field :student_id, value: current_student.id %>
+                        <center><%= f.submit class:"lesson-button form-submit-btn" %></center>
+                    <% end %>
+                  </div>  
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+    </div>
+</div>
